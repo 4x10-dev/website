@@ -623,8 +623,8 @@ footer {
         height: calc(100vh - 80px);
         background: rgba(0, 0, 0, 0.98);
         backdrop-filter: blur(20px);
-        padding: 3rem 1.5rem;
-        gap: 2rem;
+        padding: 5rem 1.5rem;
+        gap: 1.5rem;
         z-index: 999;
         justify-content: flex-start;
         align-items: center;
@@ -636,7 +636,7 @@ footer {
     }
 
     .nav-links a {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         letter-spacing: 2px;
     }
 
@@ -702,6 +702,18 @@ footer {
 
     .contacts-info {
         padding: 2rem 1rem;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    footer .cookie-btn-group {
+        justify-content: center;
     }
 }
 
