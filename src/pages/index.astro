@@ -67,6 +67,25 @@ import Layout from "../layouts/Layout.astro";
         70%  { opacity: 1; transform: translateX(-50%) translateY(0); }
         100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
     }
+
+    @media (max-width: 968px) {
+        #hero.hero {
+            height: auto;
+            min-height: 90vh;
+        }
+        .product-section {
+            padding: 40px 0 !important;
+        }
+        #show-engine-preview {
+            margin-top: 0 !important;
+        }
+        #pan-tilt-preview {
+            padding-bottom: 60px !important;
+        }
+        .scroll-hint {
+            display: none; /* Hide on mobile to save space */
+        }
+    }
 </style>
 
 <Layout>
