@@ -40,12 +40,16 @@ const { title, description, showFooter = true } = Astro.props;
 
     {showFooter && (
     <footer>
-        <div class="container" style="display: flex; justify-content: flex-start; gap: 1.5rem; flex-wrap: wrap;">
-            <a href="/website/contacts" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Contact Us</a>
-            <a href="/website/legal-info" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Legal Info</a>
-            <a href="/website/privacy-policy" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Privacy Policy</a>
-            <a href="/website/cookie-settings" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Cookie Settings</a>
-            <a href="/website/imprint" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Imprint</a>
+        <div class="container footer-links">
+            <div class="footer-row">
+                <a href="/website/contacts">Contact Us</a>
+                <a href="/website/legal-info">Legal Info</a>
+                <a href="/website/privacy-policy">Privacy Policy</a>
+            </div>
+            <div class="footer-row">
+                <a href="/website/cookie-settings">Cookie Settings</a>
+                <a href="/website/imprint">Imprint</a>
+            </div>
         </div>
     </footer>
     )}
