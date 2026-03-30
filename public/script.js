@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('astro:page-load', () => {
     // Reveal Animations on Scroll
     const revealElements = document.querySelectorAll('.reveal');
     
