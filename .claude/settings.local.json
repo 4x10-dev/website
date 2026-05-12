@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(Get-Content C:\\\\Users\\\\PZ\\\\Desktop\\\\4x10\\\\WEB\\\\NEW DEV WEB ASTRO\\\\NEW DEV WEB\\\\dist\\\\CNAME *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

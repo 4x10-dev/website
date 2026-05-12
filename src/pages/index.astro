@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+    /* Hero: fill full viewport, preserve bottom of image */
+    #hero.hero {
+        height: 100vh;
+        overflow: hidden;
+    }
+    #hero .hero-bg {
+        background-position: center bottom;
+        background-size: cover;
+    }
+    /* Product sections: compact */
+    .product-section {
+        padding: 30px 0 !important;
+        min-height: auto !important;
+    }
+    /* Show Engine starts further below the hero */
+    #show-engine-preview {
+        margin-top: 60px !important;
+    }
+    /* Footer breathing room */
+    #pan-tilt-preview {
+        padding-bottom: 80px !important;
+    }
+    .product-grid {
+        gap: 2rem !important;
+    }
+    .product-info h2 a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+    .product-info h2 a:hover {
+        color: rgba(255, 0, 0, 0.8);
+    }
+</style>
+
+<Layout>
+    <main class="home-main">
+        <section id="hero" class="hero">
+            <div class="hero-bg" style="background-image: url('/assets/hero-bg.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="professional-text">
+                    <h1>We are 4x10.DEV</h1>
+                    <p class="subtitle">A team building an AI-powered platform for show programming.</p>
+                    <div class="hero-body">
+                        <p>We know the industry's gaps, and now we're building an ecosystem we always needed ourselves:
+                            effective, flexible and accessible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="show-engine-preview" class="product-section" style="background: rgba(0, 0, 0, 0.9);">
+            <div class="container">
+                <div class="product-grid">
+                    <div class="product-info reveal">
+                        <h2><a href="/show-engine">Show Engine</a></h2>
+                        <h3>Automated core of your production</h3>
+                        <p class="description">Extracts audio stems from a track, generates precise triggers and control curves, and auto-builds a detailed timeline. Your tracks are ready to sync with lights, visuals, and effects.</p>
+                    </div>
+                    <div class="product-media reveal">
+                        <div class="gif-grid">
+                            <img src="/assets/gifs/show-engine/demo-1.gif" alt="Show Engine Demo 1" loading="lazy">
+                            <img src="/assets/gifs/show-engine/demo-2.gif" alt="Show Engine Demo 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="signal-processing-preview" class="product-section" style="background: rgba(0, 0, 0, 0.9);">
+            <div class="container">
+                <div class="product-grid inverse">
+                    <div class="product-info reveal">
+                        <h2><a href="/signal-processing">Signal Processing Engine</a></h2>
+                        <h3>Control hub for advanced visual effects</h3>
+                        <p class="description">Handles complex bitmap data in real-time, driving vast arrays of lights, lasers, and SFX.</p>
+                    </div>
+                    <div class="product-media reveal">
+                        <div class="gif-grid">
+                            <img src="https://c-p.rmcdn1.net/64d10d2872c036003d9c3da8/5991296/Image-28e0c9f7-d1ad-4d73-a05c-03e1dc50f812.gif" alt="Signal Processing Engine Demo 1" loading="lazy">
+                            <img src="https://c-p.rmcdn1.net/64d10d2872c036003d9c3da8/5991296/Image-95d195cc-3848-440b-9d0e-bad0255d9f07.gif" alt="Signal Processing Engine Demo 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pan-tilt-preview" class="product-section" style="background: rgba(0, 0, 0, 0.9);">
+            <div class="container">
+                <div class="product-grid">
+                    <div class="product-info reveal">
+                        <h2><a href="/pan-tilt">Pan/Tilt Suite</a></h2>
+                        <h3>A smarter way to program intelligent lighting</h3>
+                        <p class="description">Forget the manual pan/tilt adjustments — use a parametric tracking pattern generator to quickly position and animate every fixture with precision.</p>
+                    </div>
+                    <div class="product-media reveal">
+                        <div class="gif-grid">
+                            <img src="https://c-p.rmcdn1.net/64d10d2872c036003d9c3da8/5991296/Image-d7490835-804b-41ee-931e-8eb773c17156.gif" alt="Pan/Tilt Suite Demo 1" loading="lazy">
+                            <img src="https://c-p.rmcdn1.net/64d10d2872c036003d9c3da8/5991296/Image-2d07796d-12fc-4500-bf1c-9f728fad3707.gif" alt="Pan/Tilt Suite Demo 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

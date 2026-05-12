@@ -1,0 +1,58 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import "../styles/global.css";
+
+const { title, description, showFooter = true } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>{title || "4x10.dev | AI-powered platform for show programming"}</title>
+    <meta name="description" content={description || "4x10.dev is a team building an AI-powered platform for show programming. Explore our Show Engine, Signal Processing Engine, and Pan/Tilt Suite."}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <ClientRouter />
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-fixed">
+                <a href="/"><img src="/assets/logo.png" alt="4x10.dev Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/show-engine">Show Engine</a></li>
+                <li><a href="/signal-processing">Signal Processing Engine</a></li>
+                <li><a href="/pan-tilt">Pan/Tilt Suite</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/contacts">Contacts</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <slot />
+
+    {showFooter && (
+    <footer>
+        <div class="container" style="display: flex; justify-content: flex-start; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="/contacts" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Contact Us</a>
+            <a href="/legal-info" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Legal Info</a>
+            <a href="/privacy-policy" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Privacy Policy</a>
+            <a href="/cookie-settings" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Cookie Settings</a>
+            <a href="/imprint" style="color: #fff; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Imprint</a>
+        </div>
+    </footer>
+    )}
+
+    <script src="/script.js" is:inline></script>
+</body>
+</html>
